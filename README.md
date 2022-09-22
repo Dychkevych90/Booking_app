@@ -1,1 +1,3 @@
-# Booking_app-
+# Booking_app
+Booking / reservation app
+- ESLint
