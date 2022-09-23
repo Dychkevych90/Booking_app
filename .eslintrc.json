@@ -32,12 +32,15 @@
     "prefer-object-spread": 2,
     "react-hooks/exhaustive-deps": "warn",
     "react-hooks/rules-of-hooks": "warn",
+    "react/forbid-component-props":["warn", { "forbid": ["style"] }],
+    "react/forbid-dom-props":["warn", { "forbid": ["style"] }],
     "react/jsx-closing-bracket-location": ["error", "tag-aligned"],
     "react/jsx-curly-spacing": [2, { "when": "always", "children": true }],
     "react/jsx-equals-spacing": ["error", "never"],
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "react/jsx-tag-spacing": ["error", { "beforeClosing": "never" }],
     "react/no-array-index-key": "warn",
-    "semi": ["error", "always"]
+    "semi": ["error", "always"],
+    "react/prop-types": 0
   }
 }
