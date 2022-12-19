@@ -11,8 +11,8 @@ const HeaderSearch = styled.div`
   border-radius: 5px;
   position: absolute;
   bottom: -25px;
-  width: 100%;
   max-width: 1440px;
+  width: 80%;
   left: 50%;
   right: 50%;
   transform: translate(-50%, 0%);

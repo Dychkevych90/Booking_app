@@ -23,6 +23,12 @@ const HomePageWrapper = styled.div`
       margin-bottom: 15px;
     }
   }
+
+  .homeTitle{
+    width: 1024px;
+    font-size: 20px;
+    margin-top: 50px;
+  }
   
   .header_top {
     width: 100%;

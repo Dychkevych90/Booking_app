@@ -25,7 +25,7 @@ const Navigation = () => {
     <NavigationList>
       {
         navigation.map( ( item ) => {
-          const active = item.text === 'Stays' && 'active';
+          const active = item.text === 'Stays' ? 'active' : null;
 
           return (
             <div key={ item.text } className={ active }>
