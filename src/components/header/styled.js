@@ -6,9 +6,15 @@ const Header = styled.div`
 	flex-direction: column;
   margin-bottom: 40px;
   
+  .header_top {
+    display: flex;
+    justify-content: space-between;
+  }
+  
   .logo {
     color: #fff;
     font-size: 20px;
+    text-decoration: none;
     span {
       background-color: #333;
       padding: 5px;

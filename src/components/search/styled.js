@@ -16,6 +16,7 @@ const HeaderSearch = styled.div`
   left: 50%;
   right: 50%;
   transform: translate(-50%, 0%);
+  z-index: 100;
 
   .headerIcon {
     color: lightgray;

@@ -1,9 +1,13 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
+import { useNavigate } from "react-router-dom";
 
 import { DateRange } from "react-date-range";
 import { format } from "date-fns";
 
 import MainButton from '../layout/buttons/mainButton';
+
+import { SearchContext } from "../../context/searchContext";
+import { AuthContext } from "../../context/authContext";
 
 import "react-date-range/dist/styles.css"; // main css file
 import "react-date-range/dist/theme/default.css"; // theme css file
@@ -13,10 +17,10 @@ import {
   faPerson,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import { HeaderSearch } from './styled.js';
 
 const Search = () => {
-  // eslint-disable-next-line no-unused-vars
   const [destination, setDestination] = useState("");
   const [openDate, setOpenDate] = useState(false);
   const [dates, setDates] = useState([
@@ -33,6 +37,10 @@ const Search = () => {
     room: 1,
   });
 
+  const navigate = useNavigate();
+  const { user } = useContext(AuthContext);
+  console.log('user', user);
+
   const handleOption = (name, operation) => {
     setOptions((prev) => {
       return {
@@ -42,9 +50,11 @@ const Search = () => {
     });
   };
 
+  const { dispatch } = useContext(SearchContext);
+
   const handleSearch = () => {
-    //dispatch({ type: "NEW_SEARCH", payload: { destination, dates, options } });
-    //navigate("/hotels", { state: { destination, dates, options } });
+    dispatch({ type: "NEW_SEARCH", payload: { destination, dates, options } });
+    navigate("/hotels", { state: { destination, dates, options } });
   };
 
   return(
@@ -57,6 +67,7 @@ const Search = () => {
           placeholder="Where are you going?"
           className="headerSearchInput"
           onChange={ (e) => setDestination(e.target.value) }
+          required
         />
       </div>
 

@@ -42,8 +42,13 @@ const FeaturedPropertiesItem = styled.div`
     font-weight: bold;
   }
 
-  .fpRating>span{
-    font-size: 14px;
+  .fpRating {
+    button {
+      min-width: 25px;
+    }
+    span{
+      font-size: 14px;
+    }
   }
 `;
 

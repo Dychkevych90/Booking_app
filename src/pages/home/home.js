@@ -10,6 +10,8 @@ import Search from '../../components/search/search';
 import Featured from '../../components/featured/featured';
 import PropertyList from '../../components/propertyList/propertyList';
 import FeaturedProperties from '../../components/featuredProperties/featuredProperties';
+import Footer from '../../components/footer/footer';
+import MailList from '../../components/mailList/mailList';
 
 const HomePage = () => {
   return(
@@ -30,7 +32,11 @@ const HomePage = () => {
         <h2 className="homeTitle">Homes guests love</h2>
         <FeaturedProperties />
       </div>
+      <MailList />
 
+      <div className="container">
+        <Footer />
+      </div>
     </HomePageWrapper>
   );
 };
